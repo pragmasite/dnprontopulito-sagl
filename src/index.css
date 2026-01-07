@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here.
+All colors MUST be HSL.
+For Cleaning Company: Professional - Navy 220-240° + Gold Accent
+*/
+
+@layer base {
+  :root {
+    --background: 45 40% 98%;
+    --foreground: 220 25% 20%;
+
+    --card: 45 35% 96%;
+    --card-foreground: 220 25% 20%;
+
+    --popover: 45 40% 98%;
+    --popover-foreground: 220 25% 20%;
+
+    --primary: 227 35% 28%;
+    --primary-foreground: 45 40% 98%;
+
+    --secondary: 45 45% 88%;
+    --secondary-foreground: 220 25% 25%;
+
+    --muted: 45 35% 92%;
+    --muted-foreground: 220 15% 50%;
+
+    --accent: 40 85% 52%;
+    --accent-foreground: 220 25% 20%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 45 40% 98%;
+
+    --border: 220 20% 88%;
+    --input: 220 20% 88%;
+    --ring: 227 35% 28%;
+
+    --radius: 0.75rem;
+
+    --shadow-soft: 0 4px 20px -4px hsl(227 35% 28% / 0.1);
+    --shadow-medium: 0 8px 30px -6px hsl(227 35% 28% / 0.15);
+
+    --sidebar-background: 45 40% 98%;
+    --sidebar-foreground: 220 25% 20%;
+    --sidebar-primary: 227 35% 28%;
+    --sidebar-primary-foreground: 45 40% 98%;
+    --sidebar-accent: 40 85% 52%;
+    --sidebar-accent-foreground: 220 25% 20%;
+    --sidebar-border: 220 20% 88%;
+    --sidebar-ring: 227 35% 28%;
+  }
+
+  .dark {
+    --background: 220 25% 18%;
+    --foreground: 45 40% 98%;
+
+    --card: 220 25% 20%;
+    --card-foreground: 45 40% 98%;
+
+    --popover: 220 25% 20%;
+    --popover-foreground: 45 40% 98%;
+
+    --primary: 45 40% 98%;
+    --primary-foreground: 227 35% 28%;
+
+    --secondary: 220 30% 35%;
+    --secondary-foreground: 45 40% 98%;
+
+    --muted: 220 30% 35%;
+    --muted-foreground: 45 30% 70%;
+
+    --accent: 40 85% 52%;
+    --accent-foreground: 220 25% 20%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 45 40% 98%;
+
+    --border: 220 30% 35%;
+    --input: 220 30% 35%;
+    --ring: 45 40% 98%;
+    --sidebar-background: 220 25% 18%;
+    --sidebar-foreground: 45 40% 98%;
+    --sidebar-primary: 227 35% 28%;
+    --sidebar-primary-foreground: 45 40% 98%;
+    --sidebar-accent: 40 85% 52%;
+    --sidebar-accent-foreground: 220 25% 20%;
+    --sidebar-border: 220 30% 35%;
+    --sidebar-ring: 45 40% 98%;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Libre Baskerville', serif;
+  }
+}
